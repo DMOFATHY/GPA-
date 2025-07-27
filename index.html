@@ -1,55 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GPA Calculator - Dr. Mohamed Fathy</title>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; direction: rtl; padding: 30px; background: #f9f9f9; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; background: #fff; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
-    input { width: 100%; padding: 8px; font-size: 14px; text-align: center; }
-    button { padding: 10px 20px; font-weight: bold; margin-top: 10px; background-color: #4CAF50; border: none; color: white; border-radius: 6px; cursor: pointer; }
-    .section { background: #fff; padding: 20px; border-radius: 10px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .result { margin-top: 15px; font-size: 1.1em; color: #1e6f36; font-weight: bold; }
-    .footer { margin-top: 40px; font-size: 0.9em; color: #555; text-align: center; border-top: 1px solid #ccc; padding-top: 10px; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1>📚 جدول المذاكرة الذكي</h1>
+  <div>
+    <input type="text" id="taskInput" placeholder="أضف مادة أو مهمة" />
+    <button onclick="addTask()">إضافة</button>
+  </div>
+  <ul id="taskList"></ul>
 
-  <h2>📚 حساب GPA الترم الثاني</h2>
-
-  <table id="table">
-    <tr>
-      <th>المادة</th>
-      <th>الدرجة (من 4)</th>
-      <th>عدد الساعات</th>
-    </tr>
-    <tr>
-      <td><input type="text" placeholder="مثال: تشريح"></td>
-      <td><input type="number" class="grade" step="0.01" min="0" max="4"></td>
-      <td><input type="number" class="hours" step="0.5" min="0"></td>
-    </tr>
-  </table>
-
-  <button onclick="addRow()">➕ أضف مادة</button>
-  <button onclick="calculateTermGPA()">📊 احسب GPA الترم الثاني</button>
-
-  <div class="result" id="termGPAResult"></div>
-
-  <div class="section">
-    <h3>📈 حساب المعدل التراكمي</h3>
-
-    <label>GPA الترم الأول:</label>
-    <input type="number" id="gpa1" placeholder="مثال: 3.2" step="0.01" min="0" max="4">
-
-    <label>عدد الساعات الترم الأول:</label>
-    <input type="number" id="hours1" placeholder="مثال: 15" step="0.5" min="0">
-
-    <label>GPA الترم الثاني (يظهر تلقائي):</label>
-    <input type="number" id="gpa2" placeholder="مثال: 3.5" step="0.01" min="0" max="4" readonly>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
